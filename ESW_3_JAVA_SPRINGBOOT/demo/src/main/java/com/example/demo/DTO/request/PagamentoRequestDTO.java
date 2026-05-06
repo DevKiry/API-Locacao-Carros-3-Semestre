@@ -1,3 +1,9 @@
+/*
+Autor...: João Victor Rantin Silvério
+Data....: 06/05/2026
+Objetivo: Criar o PagamentoRequestDTO
+*/
+
 package com.example.demo.DTO.request;
 
 import jakarta.validation.constraints.NotBlank;
