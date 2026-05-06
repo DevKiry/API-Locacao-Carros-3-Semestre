@@ -4,9 +4,9 @@
 package com.example.demo.DTO.request;
 
 import jakarta.validation.constraints.NotBlank;
-Import java.time.LocalDateTime;
+import java.time.LocalDateTime;
 
-public record ReservaeresponseDTO(
+public record ReservaRequestDTO(
 
     @NotBlank(message = "Data de inicio não pode vir vazia")
     LocalDateTime datainicio,
