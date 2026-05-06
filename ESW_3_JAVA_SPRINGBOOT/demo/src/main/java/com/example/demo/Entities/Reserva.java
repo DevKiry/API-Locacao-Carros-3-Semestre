@@ -1,6 +1,8 @@
-/*  Autor: Wellyngton Gabriel
+/*  Autor: Wellyngton Gabriel Randolfo Ramos
     entidade: reserva
 */
+package com.example.demo.Entities;
+
 import java.time.LocalDateTime;
 import lombok.*;
 import jakarta.persistence.*;
