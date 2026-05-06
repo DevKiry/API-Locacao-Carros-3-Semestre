@@ -1,13 +1,12 @@
 package com.example.demo.DTO.request;
 
-import jakarta.validation.constraints.DecimalMin;
-import jakarta.validation.constraints.Max;
-import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-public class CarrorequestDTO {
+@Data
+@NoArgsConstructor
+public class CarroRequestDTO {
 
     @NotBlank(message = "Modelo é obrigatório")
     private String modelo;
@@ -29,22 +28,4 @@ public class CarrorequestDTO {
     @NotNull(message = "Preço da diária é obrigatório")
     @DecimalMin(value = "0.0", inclusive = false, message = "Preço deve ser maior que zero")
     private Float precoDiaria;
-
-    public String getModelo() { return modelo; }
-    public void setModelo(String modelo) { this.modelo = modelo; }
-
-    public String getMarca() { return marca; }
-    public void setMarca(String marca) { this.marca = marca; }
-
-    public Integer getAno() { return ano; }
-    public void setAno(Integer ano) { this.ano = ano; }
-
-    public String getPlaca() { return placa; }
-    public void setPlaca(String placa) { this.placa = placa; }
-
-    public Boolean getDisponivel() { return disponivel; }
-    public void setDisponivel(Boolean disponivel) { this.disponivel = disponivel; }
-
-    public Float getPrecoDiaria() { return precoDiaria; }
-    public void setPrecoDiaria(Float precoDiaria) { this.precoDiaria = precoDiaria; }
 }
