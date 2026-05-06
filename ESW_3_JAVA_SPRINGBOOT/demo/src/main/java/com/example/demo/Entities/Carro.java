@@ -1,9 +1,29 @@
+/*
+autor: Arthur Broleze Silvestrini
+ */
+
 package com.example.demo.Entities;
-import jakarta.persistence.*;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@Data
 @Entity
 @Table(name = "carros")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+
 public class Carro {
 
     @Id
@@ -28,37 +48,7 @@ public class Carro {
     @Column(nullable = false)
     private float precoDiaria;
 
-    public Carro() {}
-
-    public Carro(String modelo, String marca, Integer ano, String placa,
-                 Boolean disponivel, float precoDiaria) {
-        this.modelo = modelo;
-        this.marca = marca;
-        this.ano = ano;
-        this.placa = placa;
-        this.disponivel = disponivel;
-        this.precoDiaria = precoDiaria;
-    }
-
-    // Getters e Setters
-    public Long getId() { return id; }
-    public void setId(Long id) { this.id = id; }
-
-    public String getModelo() { return modelo; }
-    public void setModelo(String modelo) { this.modelo = modelo; }
-
-    public String getMarca() { return marca; }
-    public void setMarca(String marca) { this.marca = marca; }
-
-    public Integer getAno() { return ano; }
-    public void setAno(Integer ano) { this.ano = ano; }
-
-    public String getPlaca() { return placa; }
-    public void setPlaca(String placa) { this.placa = placa; }
-
-    public Boolean getDisponivel() { return disponivel; }
-    public void setDisponivel(Boolean disponivel) { this.disponivel = disponivel; }
-
-    public float getPrecoDiaria() { return precoDiaria; }
-    public void setPrecoDiaria(float precoDiaria) { this.precoDiaria = precoDiaria; }
 }
+
+
+    
