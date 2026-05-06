@@ -10,18 +10,18 @@ import jakarta.validation.constraints.NotBlank;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
-public class ManutencaoDTO (
+public record ManutencaoDTO (
 
-    private Long carroId;
+    Long carroId;
 
-    private LocalDateTime dataInicio;
+    LocalDateTime dataInicio;
 
-    private LocalDateTime dataFim;
+    LocalDateTime dataFim;
 
     @NotBlank(message = "A descrição é obrigatória")
-    private String descricao;
+    String descricao;
 
     @NotBlank(message = "O Status é obrigatório")
-    private String status;
+    String status;
 
 ) {}
