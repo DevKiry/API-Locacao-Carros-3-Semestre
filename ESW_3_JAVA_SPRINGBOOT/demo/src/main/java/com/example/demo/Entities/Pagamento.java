@@ -1,3 +1,9 @@
+/*
+Autor...: João Victor Rantin Silvério
+Data....: 06/05/2026
+Objetivo: Criar a entidade Pagamento
+*/
+
 package com.example.demo.Entities;
 
 import jakarta.persistence.*;
