@@ -11,7 +11,7 @@ import jakarta.validation.constraints.NotNull;
 
 public record ManutencaoDTO (
 
-    @NotNull(menssage = "O ID do carro é obrigatorio")
+    @NotNull(message = "O ID do carro é obrigatorio")
     Long carroId,
 
     LocalDateTime dataInicio,
