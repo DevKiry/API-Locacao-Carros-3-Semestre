@@ -1,7 +1,5 @@
 package com.example.demo.DTO.request;
 
-import java.math.BigDecimal;
-
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
@@ -30,7 +28,7 @@ public class CarrorequestDTO {
 
     @NotNull(message = "Preço da diária é obrigatório")
     @DecimalMin(value = "0.0", inclusive = false, message = "Preço deve ser maior que zero")
-    private BigDecimal precoDiaria;
+    private Float precoDiaria;
 
     public String getModelo() { return modelo; }
     public void setModelo(String modelo) { this.modelo = modelo; }
@@ -47,6 +45,6 @@ public class CarrorequestDTO {
     public Boolean getDisponivel() { return disponivel; }
     public void setDisponivel(Boolean disponivel) { this.disponivel = disponivel; }
 
-    public BigDecimal getPrecoDiaria() { return precoDiaria; }
-    public void setPrecoDiaria(BigDecimal precoDiaria) { this.precoDiaria = precoDiaria; }
+    public Float getPrecoDiaria() { return precoDiaria; }
+    public void setPrecoDiaria(Float precoDiaria) { this.precoDiaria = precoDiaria; }
 }
