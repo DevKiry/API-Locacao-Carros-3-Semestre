@@ -1,4 +1,4 @@
-/*  Autor: Wellyngton Gabriel Randolfo Ramos
+/*  Autor: Caio Felipe Braga de Oliveira
     Data: 06/05/2026
     Entidade: Cliente
 */
