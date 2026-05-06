@@ -31,11 +31,11 @@ public class Reserva {
 
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "clienteid", nullable = false, foreignKey = @ForeignKey(name = "clientesomething"))
+    @JoinColumn(name = "cliente_id", nullable = false, foreignKey = @ForeignKey(name = "clientesomething"))
     private Cliente cliente;
     
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "carroid", nullable = false, foreignKey = @ForeignKey(name = "carrosomething"))
+    @JoinColumn(name = "carro_id", nullable = false, foreignKey = @ForeignKey(name = "carrosomething"))
     private Carro carro;
     
 }
