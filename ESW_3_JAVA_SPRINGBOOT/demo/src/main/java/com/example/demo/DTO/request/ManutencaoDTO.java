@@ -6,7 +6,7 @@ import jakarta.validation.constraints.NotBlank;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
-public class ManutencaoDTO {
+public class ManutencaoDTO (
 
     private Long carroId;
 
@@ -20,4 +20,4 @@ public class ManutencaoDTO {
     @NotBlank(message = "O Status é obrigatório")
     private String status;
 
-}
+) {}
