@@ -8,6 +8,6 @@ import com.example.demo.Entities.Reserva;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface Reservarepositorio extends JpaRepository<Reserva, Long> {
+public interface ReservaRepository extends JpaRepository<Reserva, Long> {
     List<Reserva> findByStatusreserva(String statusreserva);
 }
