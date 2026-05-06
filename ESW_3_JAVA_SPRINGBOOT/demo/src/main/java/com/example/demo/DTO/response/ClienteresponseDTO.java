@@ -1,5 +1,11 @@
-package com.example.demo.DTO;
+package com.example.demo.DTO.response;
 
-@Data
-@NoArgsConstructor
-public class ClienteDTO {}
+public record ClienteresponseDTO(
+    Long id,
+    String nome,
+    String telefone,
+    String email,
+    String endereco,
+    int documento
+) {
+}
