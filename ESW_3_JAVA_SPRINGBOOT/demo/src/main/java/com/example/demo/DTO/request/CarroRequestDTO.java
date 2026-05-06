@@ -1,4 +1,4 @@
-package com.example.demo.dto;
+package com.example.demo.DTO.request;
 
 import jakarta.validation.constraints.*;
 import java.math.BigDecimal;
