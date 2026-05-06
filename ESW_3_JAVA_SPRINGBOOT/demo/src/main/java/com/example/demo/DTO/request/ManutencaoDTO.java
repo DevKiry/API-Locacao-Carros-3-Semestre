@@ -1,3 +1,7 @@
+/*
+    Autor: Gustavo Shinozaki de Freitas 
+*/
+
 package com.example.demo.DTO.request;
 
 import java.time.LocalDateTime;
