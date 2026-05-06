@@ -1,3 +1,8 @@
+/*
+Autor...: João Victor Rantin Silvério
+Data....: 06/05/2026
+Objetivo: Criar o PagamentoResponseDTO
+*/
 package com.example.demo.DTO.response;
 
 import java.math.BigDecimal;
