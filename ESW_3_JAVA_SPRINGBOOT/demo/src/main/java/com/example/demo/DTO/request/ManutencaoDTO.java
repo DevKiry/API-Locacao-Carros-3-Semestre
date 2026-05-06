@@ -7,11 +7,11 @@ package com.example.demo.DTO.request;
 import java.time.LocalDateTime;
 
 import jakarta.validation.constraints.NotBlank;
-import lombok.NoArgsConstructor;
+import jakarta.validation.constraints.NotNull;
 
-@NoArgsConstructor
 public record ManutencaoDTO (
 
+    @NotNull(menssage = "O ID do carro é obrigatorio")
     Long carroId;
 
     LocalDateTime dataInicio;
