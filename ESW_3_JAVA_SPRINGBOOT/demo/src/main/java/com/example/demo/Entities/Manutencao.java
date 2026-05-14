@@ -1,54 +1,45 @@
 /*
-autor: Arthur Broleze Silvestrini
- */
+    Autor: Gustavo Shinozaki de Freitas 
+*/
 
 package com.example.demo.Entities;
+
+import java.time.LocalDateTime;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Data
 @Entity
-@Table(name = "carros")
 @Getter
 @Setter
-@NoArgsConstructor
-@AllArgsConstructor
-
-public class Carro {
+@NoArgsConstructor @AllArgsConstructor
+public class Manutencao {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
-    private String modelo;
+    private LocalDateTime dataInicio;
+
+    private LocalDateTime dataFim;
 
     @Column(nullable = false)
-    private String marca;
-
+    private String descricao;
+    
     @Column(nullable = false)
-    private Integer ano;
+    private String status;
 
-    @Column(nullable = false, unique = true)
-    private String placa;
-
-    @Column(nullable = false)
-    private Boolean disponivel;
-
-    @Column(nullable = false)
-    private float precoDiaria;
-
+    @ManyToOne
+    @JoinColumn(name = "carro_id")
+    private Carro carro;
 }
 
-
-    

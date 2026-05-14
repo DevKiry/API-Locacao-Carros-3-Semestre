@@ -1,3 +1,8 @@
+/*
+Autor...: João Victor Rantin Silvério
+Data....: 06/05/2026
+Objetivo: Criar um repository de Pagamento
+*/
 package com.example.demo.Repository;
 
 import com.example.demo.Entities.Pagamento;

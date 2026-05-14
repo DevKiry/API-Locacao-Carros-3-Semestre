@@ -1,3 +1,8 @@
+/*  Autor: Caio Felipe Braga de Oliveira
+    Data: 06/05/2026
+    Entidade: Cliente
+*/
+
 package com.example.demo.DTO.request;
 
 import jakarta.validation.constraints.Email;
