@@ -3,10 +3,10 @@
     Data: 06/05/2026
     Service: Cliente
 */
-package com.example.demo.service;
+package com.example.demo.service.Utils;
  
-import com.example.demo.DTO.request.ClienteRequestDTO;
-import com.example.demo.DTO.response.ClienteResponseDTO;
+import com.example.demo.DTO.request.ClienterequestDTO;
+import com.example.demo.DTO.response.ClienteresponseDTO;
 import com.example.demo.Entities.Cliente;
 import com.example.demo.Repository.ClienteRepository;
 import com.example.demo.mapper.ClienteMapper;
@@ -25,7 +25,7 @@ public class ClienteService {
         this.clienteRepository = clienteRepository;
     }
 
-    public ClienteResponseDTO criar(ClienteRequestDTO dto) {
+    public ClienteresponseDTO criar(ClienterequestDTO dto) {
         if (clienteRepository.existsByEmail(dto.email())) {
             throw new IllegalArgumentException("Já existe um cliente com o e-mail informado.");
         }
@@ -38,20 +38,20 @@ public class ClienteService {
         return ClienteMapper.toResponse(salvo);
     }
  
-    public List<ClienteResponseDTO> listarTodos() {
+    public List<ClienteresponseDTO> listarTodos() {
         return clienteRepository.findAll()
                 .stream()
                 .map(ClienteMapper::toResponse)
                 .collect(Collectors.toList());
     }
  
-    public ClienteResponseDTO buscarPorId(Long id) {
+    public ClienteresponseDTO buscarPorId(Long id) {
         Cliente cliente = clienteRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Cliente não encontrado com ID: " + id));
         return ClienteMapper.toResponse(cliente);
     }
  
-    public ClienteResponseDTO atualizar(Long id, ClienteRequestDTO dto) {
+    public ClienteresponseDTO atualizar(Long id, ClienterequestDTO dto) {
         Cliente cliente = clienteRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Cliente não encontrado com ID: " + id));
  
