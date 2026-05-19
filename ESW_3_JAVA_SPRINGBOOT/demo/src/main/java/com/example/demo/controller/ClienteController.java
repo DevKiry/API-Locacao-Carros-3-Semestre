@@ -5,9 +5,9 @@
 */
 package com.example.demo.controller;
 
-import com.example.demo.DTO.request.ClienteRequestDTO;
-import com.example.demo.DTO.response.ClienteResponseDTO;
-import com.example.demo.service.ClienteService;
+import com.example.demo.DTO.request.ClienterequestDTO;
+import com.example.demo.DTO.response.ClienteresponseDTO;
+import com.example.demo.service.Utils.ClienteService;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -26,28 +26,28 @@ public class ClienteController {
     }
 
     @PostMapping
-    public ResponseEntity<ClienteResponseDTO> criar(@RequestBody ClienteRequestDTO dto) {
-        ClienteResponseDTO response = clienteService.criar(dto);
+    public ResponseEntity<ClienteresponseDTO> criar(@RequestBody ClienterequestDTO dto) {
+        ClienteresponseDTO response = clienteService.criar(dto);
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 
     @GetMapping
-    public ResponseEntity<List<ClienteResponseDTO>> listarTodos() {
-        List<ClienteResponseDTO> clientes = clienteService.listarTodos();
+    public ResponseEntity<List<ClienteresponseDTO>> listarTodos() {
+        List<ClienteresponseDTO> clientes = clienteService.listarTodos();
         return ResponseEntity.ok(clientes);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<ClienteResponseDTO> buscarPorId(@PathVariable Long id) {
-        ClienteResponseDTO cliente = clienteService.buscarPorId(id);
+    public ResponseEntity<ClienteresponseDTO> buscarPorId(@PathVariable Long id) {
+        ClienteresponseDTO cliente = clienteService.buscarPorId(id);
         return ResponseEntity.ok(cliente);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<ClienteResponseDTO> atualizar(
+    public ResponseEntity<ClienteresponseDTO> atualizar(
             @PathVariable Long id,
-            @RequestBody ClienteRequestDTO dto) {
-        ClienteResponseDTO atualizado = clienteService.atualizar(id, dto);
+            @RequestBody ClienterequestDTO dto) {
+        ClienteresponseDTO atualizado = clienteService.atualizar(id, dto);
         return ResponseEntity.ok(atualizado);
     }
 
