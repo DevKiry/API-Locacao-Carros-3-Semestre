@@ -5,13 +5,13 @@
 */
 package com.example.demo.mapper;
 
-import com.example.demo.DTO.request.ClienteRequestDTO;
-import com.example.demo.DTO.response.ClienteResponseDTO;
+import com.example.demo.DTO.request.ClienterequestDTO;
+import com.example.demo.DTO.response.ClienteresponseDTO;
 import com.example.demo.Entities.Cliente;
 
 public class ClienteMapper {
 
-    public static Cliente toEntity(ClienteRequestDTO dto) {
+    public static Cliente toEntity(ClienterequestDTO dto) {
         Cliente cliente = new Cliente();
 
         cliente.setNome(dto.nome());
@@ -23,8 +23,8 @@ public class ClienteMapper {
         return cliente;
     }
 
-    public static ClienteResponseDTO toResponse(Cliente cliente) {
-        return new ClienteResponseDTO(
+    public static ClienteresponseDTO toResponse(Cliente cliente) {
+        return new ClienteresponseDTO(
                 cliente.getId(),
                 cliente.getNome(),
                 cliente.getEmail(),
@@ -34,7 +34,7 @@ public class ClienteMapper {
         );
     }
 
-    public static void updateEntity(Cliente cliente, ClienteRequestDTO dto) {
+    public static void updateEntity(Cliente cliente, ClienterequestDTO dto) {
         cliente.setNome(dto.nome());
         cliente.setEmail(dto.email());
         cliente.setTelefone(dto.telefone());
